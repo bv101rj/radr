@@ -36,7 +36,8 @@ def config(home_dir, config_dir, config_file_path):
     # Get user input
     print(f"You can navigate to radar.weather.gov you need to find your local station, upper left hand corner symbol looks like a copy button, select local, click on what is close to you, it should have a 4 letter code")
     radar_location = input("Paste the that 4 letter code here: ")
-    
+    dark_mode = input("Do youw want the gifs in dark mode (yes/no): ")
+
     #Create a place to save the config json
     home_dir = os.path.expanduser("~")
     config_dir = os.path.join(home_dir, ".config", "radr")
@@ -47,6 +48,7 @@ def config(home_dir, config_dir, config_file_path):
     config_data = {
             "configured": True,
             "radar_loc": radar_location,
+            "dark_mode": dark_mode
     }
     
     with open(config_file_path, "w") as config_file:
