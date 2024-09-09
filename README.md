@@ -1,2 +1,2 @@
 # radr
-weather radar at the cli
+Get your local radar with a single command
